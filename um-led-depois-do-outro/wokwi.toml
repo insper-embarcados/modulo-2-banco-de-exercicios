@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "../build/um-led-depois-do-outro/um-led-depois-do-outro.uf2"
+elf = "../build/um-led-depois-do-outro/um-led-depois-do-outro.elf"

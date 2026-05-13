@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "../build/start-stop/start-stop.uf2"
+elf = "../build/start-stop/start-stop.elf"

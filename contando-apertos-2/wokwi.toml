@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "../build/contando-apertos-2/contando-apertos-2.uf2"
+elf = "../build/contando-apertos-2/contando-apertos-2.elf"

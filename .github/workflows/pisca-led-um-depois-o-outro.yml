@@ -1,0 +1,26 @@
+name: pisca-led-um-depois-o-outro
+
+on:
+  push:
+    paths:
+      - 'pisca-led-um-depois-o-outro/main.c'
+jobs:
+  pisca-led-um-depois-o-outro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: insper-embarcados/pico-build@v1
+      - uses: insper-embarcados/actions-wokwi-test@v3
+        with:
+          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+          test_name: pisca-led-um-depois-o-outro
+      - uses: insper-embarcados/actions-firmware-rubric-check@v0
+        with:
+          c_file: pisca-led-um-depois-o-outro/main.c
+          rubric_file: pisca-led-um-depois-o-outro/rubric_firmware.yml
+      - uses: insper-embarcados/actions-embedded-check@v1
+        with:
+          c_file: pisca-led-um-depois-o-outro/main.c
+      - uses: insper-embarcados/actions-cppcheck@v1
+        with:
+          c_file: pisca-led-um-depois-o-outro/main.c

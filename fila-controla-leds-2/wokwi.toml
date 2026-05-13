@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "../build/fila-controla-leds-2/fila-controla-leds-2.uf2"
+elf = "../build/fila-controla-leds-2/fila-controla-leds-2.elf"

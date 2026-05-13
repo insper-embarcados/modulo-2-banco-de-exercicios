@@ -1,0 +1,21 @@
+forbiten:
+  - names:
+    - gpio_get
+    error_text: Você não deve fazer pooling no pino, deve utilizar IRS ler os pinos.
+
+shall_have:
+  - names:
+      - xQueueBtn
+      - xSemaphoreLedR
+      - xSemaphoreLedY
+    error_text: O seu código deve necessariamente fazer uso desses recursos do rtos (com os nomes do readme)
+
+  - names:
+      - xQueueReceive
+      - xQueueSendFromISR
+    error_text: Não le ou envia dados na fila do botão?
+
+  - names:
+      - xSemaphoreGive
+      - xSemaphoreTake
+    error_text: Não le ou envia o semáforo?

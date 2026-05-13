@@ -1,0 +1,26 @@
+forbiten:
+  - names:
+    - gpio_get
+    error_text: Você não deve fazer pooling no pino, deve utilizar IRS ler os pinos.
+
+shall_have:
+  - names:
+      - xQueueValue
+    error_text: O seu código deve necessariamente fazer uso da fial listrados no digrama (com o nome correto)
+
+  - names:
+      - xQueueReceive
+      - xQueueSend
+      - xSemaphoreGiveFromISR
+      - xSemaphoreTake
+    error_text: Não le ou envia dados nas filas ou no semáforo?
+
+  - names:
+      - xSemaphoreLedY
+      - xSemaphoreLedB
+    error_text: O seu código deve necessariamente fazer uso dos semáforos listrados no digrama (com os nomes do corretos)
+
+  - names:
+      - led_task
+      - process_task
+    error_text: O seu código deve necessariamente possuir as tasks listadas no diagrama (com os nomes corretos)

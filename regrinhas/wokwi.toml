@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "../build/regrinhas/regrinhas.uf2"
+elf = "../build/regrinhas/regrinhas.elf"

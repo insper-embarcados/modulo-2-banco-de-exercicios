@@ -1,0 +1,26 @@
+name: pisca-led-um-botao
+
+on:
+  push:
+    paths:
+      - 'pisca-led-um-botao/main.c'
+jobs:
+  pisca-led-um-botao:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: insper-embarcados/pico-build@v1
+      - uses: insper-embarcados/actions-wokwi-test@v3
+        with:
+          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+          test_name: pisca-led-um-botao
+      - uses: insper-embarcados/actions-firmware-rubric-check@v0
+        with:
+          c_file: pisca-led-um-botao/main.c
+          rubric_file: pisca-led-um-botao/rubric_firmware.yml
+      - uses: insper-embarcados/actions-embedded-check@v1
+        with:
+          c_file: pisca-led-um-botao/main.c
+      - uses: insper-embarcados/actions-cppcheck@v1
+        with:
+          c_file: pisca-led-um-botao/main.c
