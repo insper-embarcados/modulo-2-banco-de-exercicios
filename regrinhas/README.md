@@ -2,7 +2,6 @@
 
 ![](imgs/exe3.gif)
 
-
 Neste exercício vocês vão utilizar o RTOS para controlarem 3 LEDs: 
 
 - LED Vermelho: Pisca a cada `100ms` sempre que o LED Amarelo estiver piscando

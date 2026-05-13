@@ -44,10 +44,6 @@ void input_task(void* p) {
     }
 }
 
-/**
- * Seu código vem aqui!
- */
-
 
 
 int main() {

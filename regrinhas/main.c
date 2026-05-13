@@ -45,7 +45,6 @@ void input_task(void* p) {
  */
 
 
-
 int main() {
     stdio_init_all();
 
@@ -59,8 +58,9 @@ int main() {
      * Seu código vem aqui!
      */
 
-    vTaskStartScheduler();
 
+
+    vTaskStartScheduler();
     while (1) {}
 
     return 0;
